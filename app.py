@@ -24,6 +24,6 @@ def index():
         # saving data to to database
         student_col.insert_one({ 'student_name': student_name,'collage_name': collage_name,'student_urn': student_urn}),
         return redirect(url_for('index'))
-    else:
-        return render_template('index.html')
+    all_students = student_col.find()
+    return render_template('index.html', student_col=all_students) 
 

@@ -33,7 +33,26 @@
         </p>
         <button type="submit">Submit</button>
     </form>
-      </center>
+    <hr>
+    <table>
+    <tr>
+        <th>Name</th>
+        <th>URN</th>
+        <th>Collage</th>
+    </tr>
+   
+
+    {% for student in student_col %}
+    <tr>
+        <td>{{ student['student_name'] }}</td>
+        <td>{{ student['student_urn']}} </td>
+        <td>{{ student['collage_name']}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+
+    
+    </center>
    
     </div>
    
